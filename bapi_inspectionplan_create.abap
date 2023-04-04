@@ -48,3 +48,11 @@ data: gt_material  type table of bapi1191_mtk_c,
       gt_reference type table of bapi1191_ref_opr_c,
       gt_return    type table of bapiret2,
       gt_operation type table of bapi1191_opr_c.
+
+data: gs_material  type bapi1191_mtk_c,
+      gs_task      type bapi1191_tsk_c,
+      gs_reference type bapi1191_ref_opr_c,
+      gs_operation type bapi1191_opr_c,
+      gs_test_run  type bapiflag,
+      gs_group     like bapi1191_tsk_c-task_list_group,
+      gs_grcounter like bapi1191_tsk_c-group_counter.
