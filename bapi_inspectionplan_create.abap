@@ -56,3 +56,10 @@ data: gs_material  type bapi1191_mtk_c,
       gs_test_run  type bapiflag,
       gs_group     like bapi1191_tsk_c-task_list_group,
       gs_grcounter like bapi1191_tsk_c-group_counter.
+      
+      
+gs_material-material = 'PLASTIC'.
+gs_material-plant = 'ARC1'.
+gs_material-valid_from = sy-datum.
+gs_material-valid_to_date = '99991231'.
+append gs_material to gt_material.
