@@ -63,3 +63,14 @@ gs_material-plant = 'ARC1'.
 gs_material-valid_from = sy-datum.
 gs_material-valid_to_date = '99991231'.
 append gs_material to gt_material.
+
+gs_task-valid_from = sy-datum.
+gs_task-valid_to_date = '99991231'.
+gs_task-task_list_usage = '1'.
+gs_task-plant = 'ARC1'.
+gs_task-task_list_status = '4'.
+gs_task-task_measure_unit = 'CCM'.
+gs_task-lot_size_from = '0'.
+gs_task-lot_size_to = '99999999'.
+gs_task-description = 'Referenzplan für Producktion'.
+append gs_task to gt_task.
