@@ -74,3 +74,23 @@ gs_task-lot_size_from = '0'.
 gs_task-lot_size_to = '99999999'.
 gs_task-description = 'Referenzplan für Producktion'.
 append gs_task to gt_task.
+
+call function 'BAPI_INSPECTIONPLAN_CREATE'
+*  exporting
+*    testrun                = wa_test_run
+**   PROFILE                =
+  importing
+    group                  = gs_group
+    groupcounter           = gs_grcounter
+  tables
+    task                   = gt_task
+    materialtaskallocation = gt_material
+    operation              = gt_operation
+*   referenceoperation     = gt_reference
+*   PRODUCTIONRESOURCE     =
+*   inspcharacteristic     = gt_inspchar
+*   textallocation         = gt_textallocation
+*   text                   = gt_text
+    return                 = gt_return
+*   INSP_CHAR_VALUES       =
+  .
