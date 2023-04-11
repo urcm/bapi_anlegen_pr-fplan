@@ -94,3 +94,15 @@ call function 'BAPI_INSPECTIONPLAN_CREATE'
     return                 = gt_return
 *   INSP_CHAR_VALUES       =
   .
+
+
+call function 'BAPI_TRANSACTION_COMMIT'.
+
+*loop at gt_return assigning field-symbol(<fs_return>).
+*  write:/ <fs_return>-message_v2.
+*
+*endloop.
+
+if not gt_return[] is initial.
+  cl_demo_output=>display( gt_return ).
+endif.
